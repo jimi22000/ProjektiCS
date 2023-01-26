@@ -1,0 +1,17 @@
+Remote Git yhdistäminen
+- git clone https://github.com/jimi22000/ProjektiCS.git
+- nano kissa.txt || echo kaunistehtävä
+- git add kissa.txt
+- git commit -m "Loin kissa.txt nimisen tiedoston"
+- git push
+
+Ajassa takas palaaminen
+- git log
+- git checkout -b ekacommit 4ebc933b8b7a3de5a05bf111282d224adccead95
+- git merge --strategy=ours main
+- git checkout main
+- git merge eka
+
+Branch käyttö
+- git checkout *nimi*
+- git checkout -b *nimi*

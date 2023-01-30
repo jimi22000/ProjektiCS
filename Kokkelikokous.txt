@@ -1,0 +1,27 @@
+Aloituskokous
+
+Paikalla olijat: Eemi Salo, Jooa Poikonen ja Jimi Leino
+Aika: 26.1.2023 klo 17.30-18
+
+
+Projekti = Kotitalous inventaario ohjelma
+
+Toiminnallisuudet: 
+
+Lista tavaroista joita voi olla kotona
+Toiminta jolla voi lisätä omia tuotteita
+
+Lista jossa on tavarat joita kotona pitää olla
+
+Kauppalista
+Lisää itsestään ostoslistaan X ajan kuluttua
+Kun on tavaraa jäljellä X määrä lisää ostoslistaan
+Manuaali lisäys
+
+Päivämäärien kirjaus
+Ilmoittaa aloitusruudussa vanhentuvista tuotteista
+
+Reseptit
+Poistaa tuotteet joita menee ruokaan
+
+Seuraava palaveri 28.1.2023 klo: 14.02

@@ -1,3 +1,5 @@
 # ProjektiCS
 
-Testaan tätä tuleeko tänne jotain siistii tekstii
+Tekijät: Jimi Leino, Eemi Salo ja Jooa Poikonen
+
+Grocery Master

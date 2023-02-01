@@ -1,0 +1,27 @@
+31.1.2023
+Paikalla: Eemi, Jooa ja Jimi
+
+Aloitus ikkuna valmiiksi
+
+Kirjautuminen/tiedon tallennus
+
+Työajanseurannan päivittäminen
+
+UML-Kaavion päivitystä
+
+Miksi tämä sprintti on tärkeä?
+
+On tärkeää päästä alkuun, koska silloin on paljon helpompi tarttua työn toimeen.
+UML-kaaviota on hyvä saada eteenpäin selkeyden lisäämiseksi.
+
+Mitä tässä sprintissä voidaan saada valmiiksi?
+
+Täsää sprintissä voidaan saada valmiiksi aloitus ikkuna ja kirjoutuminen.
+
+Miten valittu työ saadaan valmiiksi?
+
+Työ saadaan valmiiksi ahkeralla työllä hyvällä ryhmähengellä ja yhdessä tekemisellä.
+
+Seuraava kokous 6.2.2023
+
+

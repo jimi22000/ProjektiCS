@@ -1,0 +1,26 @@
+﻿<Window x:Class="Projekti.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekti"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid x:Name="eka">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="45*"/>
+            <RowDefinition Height="172*"/>
+        </Grid.RowDefinitions>
+
+        <Image x:Name="GM_Teksti" HorizontalAlignment="Center" Height="143" Margin="0,10,0,0" VerticalAlignment="Top" Width="578" Source="/Screenshot 2023-02-01 104109.png" Grid.RowSpan="2"/>
+        <Button x:Name="login" Content="Kirjaudu sisään" HorizontalAlignment="Center" Margin="0,59,0,0" VerticalAlignment="Top" Height="48" Width="152" RenderTransformOrigin="0.542,0.501" FontSize="20" Click="login_Click" Grid.Row="1"/>
+        <Button x:Name="newuser" Content="Luo uusi käyttäjä" HorizontalAlignment="Center" Margin="0,112,0,0" VerticalAlignment="Top" Height="48" Width="152" RenderTransformOrigin="0.542,0.501" FontSize="20" Click="newuser_Click" Grid.Row="1"/>
+        <Button x:Name="settings" Content="Asetukset" HorizontalAlignment="Center" Margin="0,165,0,0" VerticalAlignment="Top" Height="48" Width="152" RenderTransformOrigin="0.542,0.501" Click="Button_Click" FontSize="20" Grid.Row="1"/>
+        <Button x:Name="Quit" Content="Poistu" HorizontalAlignment="Center" Margin="0,218,0,0" VerticalAlignment="Top" Height="48" Width="152" RenderTransformOrigin="0.542,0.501" FontSize="20" Click="Quit_Click" Grid.Row="1"/>
+
+        <Grid x:Name="toka" Margin="0,90,0,0" Visibility="Visible" Grid.RowSpan="2">
+            <Button Content="Button" HorizontalAlignment="Left" Margin="63,66,0,0" VerticalAlignment="Top"/>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="185,0,0,0" VerticalAlignment="Center"/>
+        </Grid>
+    </Grid>
+</Window>

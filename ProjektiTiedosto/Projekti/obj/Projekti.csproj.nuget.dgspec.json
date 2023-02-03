@@ -1,27 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Jimi\\source\\repos\\Projekti\\Projekti\\Projekti.csproj": {}
+    "C:\\Users\\eemis\\ProjektiCS\\ProjektiTiedosto\\Projekti\\Projekti.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Jimi\\source\\repos\\Projekti\\Projekti\\Projekti.csproj": {
+    "C:\\Users\\eemis\\ProjektiCS\\ProjektiTiedosto\\Projekti\\Projekti.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Jimi\\source\\repos\\Projekti\\Projekti\\Projekti.csproj",
+        "projectUniqueName": "C:\\Users\\eemis\\ProjektiCS\\ProjektiTiedosto\\Projekti\\Projekti.csproj",
         "projectName": "Projekti",
-        "projectPath": "C:\\Users\\Jimi\\source\\repos\\Projekti\\Projekti\\Projekti.csproj",
-        "packagesPath": "C:\\Users\\Jimi\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Jimi\\source\\repos\\Projekti\\Projekti\\obj\\",
+        "projectPath": "C:\\Users\\eemis\\ProjektiCS\\ProjektiTiedosto\\Projekti\\Projekti.csproj",
+        "packagesPath": "C:\\Users\\eemis\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\eemis\\ProjektiCS\\ProjektiTiedosto\\Projekti\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Jimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\eemis\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0-windows"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0-windows7.0": {

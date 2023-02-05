@@ -10,12 +10,12 @@ namespace Projekti
     {
         public string nimi 
         {
-
+            get { return nimi; }
         }
 
         public string salasana 
         {
-        
+            get { return salasana; }
         }
 
         

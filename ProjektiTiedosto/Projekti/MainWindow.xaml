@@ -4,24 +4,37 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekti"
-        mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        mc:Ignorable="d" 
+        Title="MainWindow" Height="600 " Width="800">
     <Grid x:Name="eka">
         <Grid.RowDefinitions>
             <RowDefinition Height="127*"/>
             <RowDefinition Height="307*"/>
         </Grid.RowDefinitions>
-
-        <Image x:Name="GM_Teksti" HorizontalAlignment="Center" Height="107" VerticalAlignment="Top" Width="510" Source="/GM_nimi.jpg" Grid.RowSpan="2" Margin="0,22,0,0"/>
-        <StackPanel Orientation="Vertical" Height="210" Width="200" Margin="300,49,300,48" Grid.Row="1" >
-        <Button x:Name="login" Content="Kirjaudu sisään" HorizontalAlignment="Center"  Height="48" Width="152" Margin="0,0,0,0" FontSize="20" Click="login_Click" Grid.Row="1"/>
+        <Image x:Name="GM_teksti" HorizontalAlignment="Center" Height="100" VerticalAlignment="Center" Width="500" Source="/GM_nimi.jpg"/>
+        <StackPanel x:Name="aloitus" Orientation="Vertical" Width="200" Margin="300,23,300,153" Grid.Row="1" >
+            <Button x:Name="login" Content="Kirjaudu sisään"  Height="48" Width="152" FontSize="20" Click="login_Click"/>
             <Button x:Name="newuser" Content="Luo uusi käyttäjä" HorizontalAlignment="Center"   Height="48" Width="152" Margin="0,5,0,0" FontSize="20" Click="newuser_Click" Grid.Row="1"/>
-            <Button x:Name="settings" Content="Asetukset" HorizontalAlignment="Center"   Height="48" Width="152" Margin="0,5,0,0" Click="Button_Click" FontSize="20" Grid.Row="1"/>
+            <Button x:Name="settings" Content="Asetukset" HorizontalAlignment="Center"   Height="48" Width="152" Margin="0,5,0,0" FontSize="20" Grid.Row="1" Click="settings_Click"/>
             <Button x:Name="Quit" Content="Poistu" HorizontalAlignment="Center"  Height="48" Width="152" Margin="0,5,0,0" FontSize="20" Click="Quit_Click" Grid.Row="1"/>
         </StackPanel>
-        <Grid x:Name="toka" Margin="0,10,0,0" Visibility="Visible" Grid.Row="1">
-            <Button Content="Button" HorizontalAlignment="Left" Margin="63,66,0,0" VerticalAlignment="Top"/>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="185,0,0,0" VerticalAlignment="Center"/>
+        <Grid x:Name="CreateNewUser" Grid.Row="1" Margin="500,23,57,183" Visibility="Hidden" Background="#FF8C8888">
+            <TextBox x:Name="LuoUusiKäyttäjä" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Luo uusi käyttäjä" VerticalAlignment="Top" Width="129" />
+            <TextBox x:Name="firstname" HorizontalAlignment="Left" Margin="122,23,0,0" TextWrapping="Wrap" Text="Etunimi" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="lastname" HorizontalAlignment="Left" Margin="0,23,0,0" TextWrapping="Wrap" Text="Sukunimi" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="age" HorizontalAlignment="Left" Margin="0,46,0,0" TextWrapping="Wrap" Text="Ikä" VerticalAlignment="Top" Width="120" TextChanged="age_TextChanged"/>
+            <TextBox x:Name="email" HorizontalAlignment="Left" Margin="123,46,0,0" TextWrapping="Wrap" Text="Sähköposti" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="perhe" HorizontalAlignment="Left" Margin="0,69,0,0" TextWrapping="Wrap" Text="Perheenjäsenten määrä" VerticalAlignment="Top" Width="120" TextChanged="perhe_TextChanged"/>
+            <TextBox x:Name="aikuiset" HorizontalAlignment="Left" Margin="135,69,0,0" TextWrapping="Wrap" Text="Yli 18-vuotiaat" VerticalAlignment="Top" Width="108" Visibility="Hidden"/>
+            <TextBox x:Name="lapset" HorizontalAlignment="Left" Margin="135,92,0,0" TextWrapping="Wrap" Text="Alle 18-vuotiaat" VerticalAlignment="Top" Width="108" Visibility="Hidden"/>
         </Grid>
+        <Grid x:Name="LogIn" Grid.Row="1" Margin="57,23,500,183" Visibility="Hidden" Background="#FF8C8888">
+            <TextBox x:Name="loginbox" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Kirjaudu sisään" VerticalAlignment="Top" Width="153" />
+            <TextBox x:Name="password" HorizontalAlignment="Center" Margin="0,46,0,0" TextWrapping="Wrap" Text="Salasana" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="username" HorizontalAlignment="Center" Margin="0,23,0,0" TextWrapping="Wrap" Text="Käyttäjänimi" VerticalAlignment="Top" Width="120"/>
+            <TextBox x:Name="aikuiset1" HorizontalAlignment="Left" Margin="135,69,0,0" TextWrapping="Wrap" Text="Yli 18-vuotiaat" VerticalAlignment="Top" Width="108" Visibility="Hidden"/>
+            <TextBox x:Name="lapset1" HorizontalAlignment="Left" Margin="135,92,0,0" TextWrapping="Wrap" Text="Alle 18-vuotiaat" VerticalAlignment="Top" Width="108" Visibility="Hidden"/>
+        </Grid>
+        <Button x:Name="back" Content="Takaisin" HorizontalAlignment="Left" Margin="48,306,0,0" Grid.Row="1" VerticalAlignment="Top" Height="40" Width="140" FontSize="20" Click="back_Click" Visibility="Hidden"/> 
     </Grid>
 </Window>

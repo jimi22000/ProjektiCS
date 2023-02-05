@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\eemis\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\eemis\\.nuget\\packages"
+      "C:\\Users\\Jimi\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Jimi\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

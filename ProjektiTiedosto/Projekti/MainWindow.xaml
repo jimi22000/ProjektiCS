@@ -22,9 +22,9 @@
             <TextBox x:Name="LuoUusiKäyttäjä" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Luo uusi käyttäjä" VerticalAlignment="Top" Width="129" />
             <TextBox x:Name="firstname" HorizontalAlignment="Left" Margin="122,23,0,0" TextWrapping="Wrap" Text="Etunimi" VerticalAlignment="Top" Width="120"/>
             <TextBox x:Name="lastname" HorizontalAlignment="Left" Margin="0,23,0,0" TextWrapping="Wrap" Text="Sukunimi" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="age" HorizontalAlignment="Left" Margin="0,46,0,0" TextWrapping="Wrap" Text="Ikä" VerticalAlignment="Top" Width="120" TextChanged="age_TextChanged"/>
+            <TextBox x:Name="age" HorizontalAlignment="Left" Margin="0,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="age_TextChanged"/>
             <TextBox x:Name="email" HorizontalAlignment="Left" Margin="123,46,0,0" TextWrapping="Wrap" Text="Sähköposti" VerticalAlignment="Top" Width="120"/>
-            <TextBox x:Name="perhe" HorizontalAlignment="Left" Margin="0,69,0,0" TextWrapping="Wrap" Text="Perheenjäsenten määrä" VerticalAlignment="Top" Width="120" TextChanged="perhe_TextChanged"/>
+            <TextBox x:Name="perhe" HorizontalAlignment="Left" Margin="0,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" TextChanged="perhe_TextChanged"/>
             <TextBox x:Name="aikuiset" HorizontalAlignment="Left" Margin="135,69,0,0" TextWrapping="Wrap" Text="Yli 18-vuotiaat" VerticalAlignment="Top" Width="108" Visibility="Hidden"/>
             <TextBox x:Name="lapset" HorizontalAlignment="Left" Margin="135,92,0,0" TextWrapping="Wrap" Text="Alle 18-vuotiaat" VerticalAlignment="Top" Width="108" Visibility="Hidden"/>
         </Grid>

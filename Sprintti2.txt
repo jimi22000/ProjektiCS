@@ -1,0 +1,20 @@
+Scrum kokous 2
+
+Ma 6.2.2023 Paikalla Eemi, Jooa Ja Jimi
+
+Käsiteltävät asiat
+
+Mitä ollaan saatu tehtyä?
+Päänäkymän alku, muutamat napit, uml kaaviota, työajanseurannan päivitystä.
+
+Mitä tulisi saada tehtyä?
+Viimeviikon rästit (Kirjautuminen ja alkunäkymä valmiiksi) ja Päänäkymää eteenpäin
+
+Miksi tämä sprintti on tärkeä?
+Tämä spritti tulee määrittämään viimeisen suunnan sovellukselle.
+
+Mitä tässä sprintissä voidaan saada valmiiksi?
+Täsää sprintissä voidaan saada valmiiksi aloitus ikkuna, kirjautuminen ja tietojen tallentaminen.
+
+Miten valittu työ saadaan valmiiksi?
+Työ saadaan valmiiksi ahkeralla työllä hyvällä ryhmähengellä ja yhdessä tekemisellä.

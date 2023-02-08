@@ -69,7 +69,7 @@ namespace Projekti {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Projekti;V1.0.0.0;component/p%c3%a4%c3%a4n%c3%a4kym%c3%a4.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Projekti;component/p%c3%a4%c3%a4n%c3%a4kym%c3%a4.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\Päänäkymä.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

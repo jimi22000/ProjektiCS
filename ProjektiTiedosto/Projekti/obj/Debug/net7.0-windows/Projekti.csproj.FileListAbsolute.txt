@@ -67,3 +67,5 @@ C:\Users\Jimi\Desktop\Github\ProjektiCS\ProjektiTiedosto\Projekti\obj\Debug\net7
 C:\Users\Jimi\Desktop\Github\ProjektiCS\ProjektiTiedosto\Projekti\obj\Debug\net7.0-windows\Projekti.csproj.CoreCompileInputs.cache
 C:\Users\Jimi\Desktop\Github\ProjektiCS\ProjektiTiedosto\Projekti\obj\Debug\net7.0-windows\Projekti.genruntimeconfig.cache
 C:\Users\Jimi\Desktop\Github\ProjektiCS\ProjektiTiedosto\Projekti\obj\Debug\net7.0-windows\ref\Projekti.dll
+C:\Users\eemis\ProjektiCS\ProjektiTiedosto\Projekti\obj\Debug\net7.0-windows\Päänäkymä.g.cs
+C:\Users\eemis\ProjektiCS\ProjektiTiedosto\Projekti\obj\Debug\net7.0-windows\Päänäkymä.baml

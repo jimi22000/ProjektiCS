@@ -103,5 +103,12 @@ namespace Projekti
                 lapset.Visibility = Visibility.Visible;
             }
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Päänäkymä win2 = new Päänäkymä();
+            win2.Show();
+            this.Close();
+        }
     }
 }

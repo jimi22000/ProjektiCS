@@ -1,0 +1,20 @@
+Scrum kokous 3
+
+Ma 13.02.2023 Paikalla Eemi ja Jooa
+
+Käsiteltävät asiat
+
+Mitä ollaan saatu tehtyä?
+Päänäkymään lisäys ja tallennus napit. 
+
+Mitä tulisi saada tehtyä?
+Viimeviikon rästit (Kirjautuminen ja alkunäkymä valmiiksi) ja Päänäkymää eteenpäin
+
+Miksi tämä sprintti on tärkeä?
+Tämä on tärkeä sprintti, koska olemme paljon aikatalua jäljessä. 
+
+Mitä tässä sprintissä voidaan saada valmiiksi?
+Alkunäkymä pitää saada tehtyä. Päänäkymän yksi lista ja sen toiminnot olisisi hyvä saada valmiiksi.
+
+Miten valittu työ saadaan valmiiksi?
+Työ saadaan valmiiksi ahkeralla työllä hyvällä ryhmähengellä ja yhdessä tekemisellä.

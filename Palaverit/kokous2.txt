@@ -1,0 +1,27 @@
+Aloituskokous 30.1.2023 klo: 14.04
+
+Tehtävät asiat:
+	
+	ULM-kaavio
+	Vaatimus määrittely
+	Toiminnot:
+		Inventaario lista
+		Tavaroiden lisääminen (Tavara listaan)
+		Tavaroiden lisääminen ja poistaminen Inventaario listasta
+		Automaattinen kauppalista:
+			Lisää itsestään ostoslistaan X ajan kuluttua
+			Kun on tavaraa jäljellä X määrä lisää ostoslistaan
+			Manuaali lisäys
+		Kauppalistan tulostus
+		Käyttäjän asetukset
+	
+
+Työnjako:
+	Eemi Boss
+	Jooa Koodari juntti
+	Jimi Koodari juntti
+
+
+Scrum käytäntö: 
+	Viikon jaksot
+	

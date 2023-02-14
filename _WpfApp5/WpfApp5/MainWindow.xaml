@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfApp5.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp5"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Button x:Name="lisää" Content="lisää" HorizontalAlignment="Left" Margin="206,75,0,0" VerticalAlignment="Top" Click="lisää_Click"/>
+        <Button x:Name="tallenna" Content="tallenna" HorizontalAlignment="Left" Margin="206,101,0,0" VerticalAlignment="Top" Click="tallenna_Click"/>
+        <ListBox x:Name="inventaario" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,36,599,35" SelectionChanged="inventaario_SelectionChanged"/>
+        <TextBox x:Name="tarvikkeet" HorizontalAlignment="Left" Margin="283,36,0,0" TextWrapping="Wrap" Text="tarvikkeet" VerticalAlignment="Top" Width="120" TextChanged="tarvikkeet_TextChanged"/>
+        <TextBox x:Name="päiväys" HorizontalAlignment="Left" Margin="283,59,0,0" TextWrapping="Wrap" Text="päiväys" VerticalAlignment="Top" Width="120" TextChanged="päiväys_TextChanged"/>
+        <ListBox x:Name="kauppalista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="212,142,212,10" SelectionChanged="kauppalista_SelectionChanged"/>
+        <Button x:Name="avaa" Content="avaa" HorizontalAlignment="Left" Margin="423,95,0,0" VerticalAlignment="Top" Click="avaa_Click"/>
+
+    </Grid>
+</Window>

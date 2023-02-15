@@ -41,7 +41,6 @@ namespace Projekti
         {
             Päänäkymä win2 = new Päänäkymä();
             win2.Show();
-            
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)

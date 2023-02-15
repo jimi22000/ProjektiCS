@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\llein\\OneDrive\\Työpöytä\\Uusi kansio (2)\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
+      "projectUniqueName": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
       "projectName": "WpfApp5",
-      "projectPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\Uusi kansio (2)\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
+      "projectPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
       "packagesPath": "C:\\Users\\llein\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\Uusi kansio (2)\\_WpfApp5\\WpfApp5\\obj\\",
+      "outputPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_WpfApp5\\WpfApp5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\llein\\AppData\\Roaming\\NuGet\\NuGet.Config",

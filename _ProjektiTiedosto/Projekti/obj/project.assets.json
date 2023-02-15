@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\llein\\OneDrive\\Työpöytä\\OIKEETAKAMAA\\_ProjektiTiedosto\\Projekti\\Projekti.csproj",
+      "projectUniqueName": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_ProjektiTiedosto\\Projekti\\Projekti.csproj",
       "projectName": "Projekti",
-      "projectPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\OIKEETAKAMAA\\_ProjektiTiedosto\\Projekti\\Projekti.csproj",
+      "projectPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_ProjektiTiedosto\\Projekti\\Projekti.csproj",
       "packagesPath": "C:\\Users\\llein\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\OIKEETAKAMAA\\_ProjektiTiedosto\\Projekti\\obj\\",
+      "outputPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_ProjektiTiedosto\\Projekti\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\llein\\AppData\\Roaming\\NuGet\\NuGet.Config",

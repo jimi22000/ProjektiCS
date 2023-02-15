@@ -4,6 +4,7 @@ using System.Diagnostics;
 using System.DirectoryServices.ActiveDirectory;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -30,8 +31,8 @@ namespace Projekti
         }
         public void Tyhjennä()
         {
-            lastname.Text = "";
-            firstname.Text = "";
+            username1.Text = "";
+            password2.Text = "";
             email.Text = "";
             age.Text = "";
             perhe.Text = "";
@@ -117,7 +118,8 @@ namespace Projekti
                 perhe.Text = "";
             }
             //tää kusee. pitää keksii miten korjataan!!
-            int määrä = int.Parse(perhe.Text);
+            int määrä;
+            bool res = int.TryParse(perhe.Text, out määrä);
             if (määrä > 1)
             {
                 aikuiset.Visibility = Visibility.Visible;
@@ -147,7 +149,6 @@ namespace Projekti
                 MessageBox.Show("Vain numeroita!");
                 lapset.Text = "";
             }
-            
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -167,10 +168,6 @@ namespace Projekti
             CreateNewUser.Visibility = Visibility.Hidden;
             Tyhjennä();
         }
-        private void jatka_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
 
         private void clear2_Click(object sender, RoutedEventArgs e)
         {
@@ -184,12 +181,22 @@ namespace Projekti
             password.Text = "";
             LogIn.Visibility = Visibility.Hidden;
         }
-
-        private void jatka2_Click(object sender, RoutedEventArgs e)
+        public void jatka_Click(object sender, RoutedEventArgs e)
         {
+            if (email.Text.Length == 0)
+            {
+                MessageBox.Show("Enter an email.");
+                email.Focus();
+            }
+            else if (!Regex.IsMatch(email.Text, @"^[a-zA-Z][\w.-][a-zA-Z0-9]@[a-zA-Z0-9][\w.-][a-zA-Z0-9].[a-zA-Z][a-zA-Z.]$"))
+            {
+                MessageBox.Show("Enter a valid email.");
+                email.Select(0, email.Text.Length);
+                email.Focus();
+            }
+
+
 
         }
-
-        
     }
 }

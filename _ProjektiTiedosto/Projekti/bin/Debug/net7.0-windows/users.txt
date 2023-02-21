@@ -1,0 +1,4 @@
+leinojimi,Jodajedi1,jimi22000@hamk.fi,1,0,0
+saloeemi,Jodajedi1,eemi22000@hamk.fi,2,2,0
+poikonenjooa,Jodajedi1,jooa22000@hamk.fi,1,0,0
+lenni,Jodajedi1,lenni@lokki.com,4,2,2

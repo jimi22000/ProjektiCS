@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.DirectoryServices.ActiveDirectory;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -12,9 +13,11 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Xaml.Schema;
 using System.Xml.Linq;
 using static System.Net.Mime.MediaTypeNames;
 
@@ -36,8 +39,13 @@ namespace Projekti
             email.Text = "";
             age.Text = "";
             perhe.Text = "";
-            aikuiset.Text = "";
-            lapset.Text = "";
+            aikuiset.Text = "0";
+            lapset.Text = "0";
+        }
+
+        public void write()
+        {
+            // jotain
         }
 
         private void login_Click(object sender, RoutedEventArgs e)
@@ -118,15 +126,21 @@ namespace Projekti
                 perhe.Text = "";
             }
             //tää kusee. pitää keksii miten korjataan!!
-            int määrä;
-            bool res = int.TryParse(perhe.Text, out määrä);
-            if (määrä > 1)
+            int perhemäärä;
+            bool res = int.TryParse(perhe.Text, out perhemäärä);
+            if (perhemäärä > 1)
             {
                 aikuiset.Visibility = Visibility.Visible;
                 lapset.Visibility = Visibility.Visible;
                 AdultChild.Visibility = Visibility.Visible;
             }
-            if (määrä > 10)
+            else if (perhemäärä == 1)
+            {
+                aikuiset.Visibility = Visibility.Hidden;
+                lapset.Visibility = Visibility.Hidden;
+                AdultChild.Visibility = Visibility.Hidden;
+            }
+            if (perhemäärä > 10)
             {
                 MessageBox.Show("Oletko aivan varma?");
                 perhe.Text = "";
@@ -139,7 +153,6 @@ namespace Projekti
                 MessageBox.Show("Vain numeroita!");
                 aikuiset.Text = "";
             }
-            
         }
 
         private void lapset_TextChanged(object sender, TextChangedEventArgs e)
@@ -149,13 +162,7 @@ namespace Projekti
                 MessageBox.Show("Vain numeroita!");
                 lapset.Text = "";
             }
-        }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Päänäkymä win2 = new Päänäkymä();
-            win2.Show();
-            this.Close();
         }
 
         private void clear_Click(object sender, RoutedEventArgs e)
@@ -183,20 +190,45 @@ namespace Projekti
         }
         public void jatka_Click(object sender, RoutedEventArgs e)
         {
-            if (email.Text.Length == 0)
+            StreamWriter File = new StreamWriter("users.txt", true);
+            //File.Write(username1.Text + "," + password2.Text);
+            string tallennettava = (username1.Text + "," + password2.Text + "," + email.Text + "," + perhe.Text + "," + aikuiset.Text + "," + lapset.Text);
+            File.WriteLine(tallennettava);
+            File.Close();
+        }
+        private void jatka2_Click(object sender, RoutedEventArgs e)
+        {
+            using (StreamReader sr = new StreamReader("users.txt"))
             {
-                MessageBox.Show("Enter an email.");
-                email.Focus();
+                string rivi;
+                bool sallittu = false;
+                while ((rivi = sr.ReadLine()) != null!)
+                {
+                    // Jaetaan rivi pilkun kohdalta kahteen osaan
+                    string[] tiedot = rivi.Split(',');
+                    // Tarkistetaan käyttäjänimi ja salasana
+                    if (tiedot[0] == username.Text && tiedot[1] == password.Text)
+                    {
+                        sallittu = true;
+                    }
+                }
+                if (sallittu == true)
+                {
+                    Päänäkymä win2 = new Päänäkymä();
+                    win2.Show();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Virheellinen käyttäjätunnus tai salasana");
+                }
             }
-            else if (!Regex.IsMatch(email.Text, @"^[a-zA-Z][\w.-][a-zA-Z0-9]@[a-zA-Z0-9][\w.-][a-zA-Z0-9].[a-zA-Z][a-zA-Z.]$"))
-            {
-                MessageBox.Show("Enter a valid email.");
-                email.Select(0, email.Text.Length);
-                email.Focus();
-            }
-
-
-
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Päänäkymä win2 = new Päänäkymä();
+            win2.Show();
+            this.Close();
         }
     }
 }

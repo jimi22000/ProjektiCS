@@ -37,7 +37,19 @@ namespace WpfApp5
 
         private void lisää_Click(object sender, RoutedEventArgs e)
         {
-            inventaario.Items.Add(tarvikkeet.Text + "-" + päiväys.Text);
+            bool found = false;
+            foreach (var item in inventaario.Items)
+            {
+                if (item.ToString().Contains(tarvikkeet.Text))
+                {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found)
+            {
+                inventaario.Items.Add(tarvikkeet.Text + " - " + määrä.Text);
+            }
         }
 
         private void tarvikkeet_TextChanged(object sender, TextChangedEventArgs e)
@@ -45,7 +57,7 @@ namespace WpfApp5
 
         }
 
-        private void päiväys_TextChanged(object sender, TextChangedEventArgs e)
+        private void määrä_TextChanged(object sender, TextChangedEventArgs e)
         {
 
         }

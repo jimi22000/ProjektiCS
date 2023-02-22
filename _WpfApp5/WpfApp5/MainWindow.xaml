@@ -7,13 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="lisää" Content="lisää" HorizontalAlignment="Left" Margin="206,75,0,0" VerticalAlignment="Top" Click="lisää_Click"/>
-        <Button x:Name="tallenna" Content="tallenna" HorizontalAlignment="Left" Margin="206,101,0,0" VerticalAlignment="Top" Click="tallenna_Click"/>
+        <Button x:Name="lisää" Content="lisää" HorizontalAlignment="Left" Margin="206,36,0,0" VerticalAlignment="Top" Click="lisää_Click" Width="46"/>
+        <Button x:Name="tallenna" Content="tallenna" HorizontalAlignment="Left" Margin="206,58,0,0" VerticalAlignment="Top" Click="tallenna_Click"/>
         <ListBox x:Name="inventaario" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,36,599,35" SelectionChanged="inventaario_SelectionChanged"/>
-        <TextBox x:Name="tarvikkeet" HorizontalAlignment="Left" Margin="283,36,0,0" TextWrapping="Wrap" Text="tarvikkeet" VerticalAlignment="Top" Width="120" TextChanged="tarvikkeet_TextChanged"/>
-        <TextBox x:Name="päiväys" HorizontalAlignment="Left" Margin="283,59,0,0" TextWrapping="Wrap" Text="päiväys" VerticalAlignment="Top" Width="120" TextChanged="päiväys_TextChanged"/>
-        <ListBox x:Name="kauppalista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="212,142,212,10" SelectionChanged="kauppalista_SelectionChanged"/>
-        <Button x:Name="avaa" Content="avaa" HorizontalAlignment="Left" Margin="423,95,0,0" VerticalAlignment="Top" Click="avaa_Click"/>
+        <TextBox x:Name="tarvikkeet" HorizontalAlignment="Left" Margin="13,13,0,0" TextWrapping="Wrap" Text="tuote" VerticalAlignment="Top" Width="120" TextChanged="tarvikkeet_TextChanged"/>
+        <TextBox x:Name="määrä" HorizontalAlignment="Left" Margin="138,13,0,0" TextWrapping="Wrap" Text="määrä" VerticalAlignment="Top" Width="63" TextChanged="määrä_TextChanged"/>
+        <ListBox x:Name="kauppalista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="212,117,212,35" SelectionChanged="kauppalista_SelectionChanged"/>
+        <Button x:Name="avaa" Content="avaa" HorizontalAlignment="Left" Margin="206,83,0,0" VerticalAlignment="Top" Click="avaa_Click" Width="46"/>
 
     </Grid>
 </Window>

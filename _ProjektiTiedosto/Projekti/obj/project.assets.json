@@ -8,19 +8,19 @@
     "net7.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Jimi\\.nuget\\packages\\": {}
+    "C:\\Users\\jooap\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Jimi\\Desktop\\GitHub\\ProjektiCS\\_ProjektiTiedosto\\Projekti\\Projekti.csproj",
+      "projectUniqueName": "E:\\YhteinenRepo\\ProjektiCS\\_ProjektiTiedosto\\Projekti\\Projekti.csproj",
       "projectName": "Projekti",
-      "projectPath": "C:\\Users\\Jimi\\Desktop\\GitHub\\ProjektiCS\\_ProjektiTiedosto\\Projekti\\Projekti.csproj",
-      "packagesPath": "C:\\Users\\Jimi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Jimi\\Desktop\\GitHub\\ProjektiCS\\_ProjektiTiedosto\\Projekti\\obj\\",
+      "projectPath": "E:\\YhteinenRepo\\ProjektiCS\\_ProjektiTiedosto\\Projekti\\Projekti.csproj",
+      "packagesPath": "C:\\Users\\jooap\\.nuget\\packages\\",
+      "outputPath": "E:\\YhteinenRepo\\ProjektiCS\\_ProjektiTiedosto\\Projekti\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Jimi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jooap\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

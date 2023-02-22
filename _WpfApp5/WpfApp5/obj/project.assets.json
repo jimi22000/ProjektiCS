@@ -8,19 +8,19 @@
     "net7.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\llein\\.nuget\\packages\\": {}
+    "C:\\Users\\jooap\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
+      "projectUniqueName": "E:\\YhteinenRepo\\ProjektiCS\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
       "projectName": "WpfApp5",
-      "projectPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
-      "packagesPath": "C:\\Users\\llein\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_WpfApp5\\WpfApp5\\obj\\",
+      "projectPath": "E:\\YhteinenRepo\\ProjektiCS\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
+      "packagesPath": "C:\\Users\\jooap\\.nuget\\packages\\",
+      "outputPath": "E:\\YhteinenRepo\\ProjektiCS\\_WpfApp5\\WpfApp5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\llein\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\jooap\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

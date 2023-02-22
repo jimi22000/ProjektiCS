@@ -1,0 +1,21 @@
+Sprintti 4
+
+Ke 22.02.2023 Paikalla Eemi, Jooa ja Jimi
+
+Käsiteltävät asiat
+
+Mitä ollaan saatu tehtyä?
+Kirjautuminen
+
+Mitä tulisi saada tehtyä?
+Pääohjelma käyttökuntoon, viimeistelyä
+
+Miksi tämä sprintti on tärkeä?
+Tämä on tärkeä sprintti, koska olemme paljon aikatalua jäljessä.
+
+Mitä tässä sprintissä voidaan saada valmiiksi?
+Päänäkymän kyttövalmiiksi.
+
+Miten valittu työ saadaan valmiiksi?
+Työ saadaan valmiiksi ahkeralla työllä hyvällä ryhmähengellä ja yhdessä tekemisellä.
+

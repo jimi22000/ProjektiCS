@@ -42,12 +42,6 @@ namespace Projekti
             aikuiset.Text = "0";
             lapset.Text = "0";
         }
-
-        public void write()
-        {
-            // jotain
-        }
-
         private void login_Click(object sender, RoutedEventArgs e)
         {
             if (LogIn.Visibility == Visibility.Visible) 
@@ -116,7 +110,6 @@ namespace Projekti
             GM_teksti.Visibility = Visibility.Visible;
             back.Visibility= Visibility.Hidden;
         }
-
         private void perhe_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -125,7 +118,6 @@ namespace Projekti
                 MessageBox.Show("Vain numeroita!");
                 perhe.Text = "";
             }
-            //tää kusee. pitää keksii miten korjataan!!
             int perhemäärä;
             bool res = int.TryParse(perhe.Text, out perhemäärä);
             if (perhemäärä > 1)
@@ -162,7 +154,6 @@ namespace Projekti
                 MessageBox.Show("Vain numeroita!");
                 lapset.Text = "";
             }
-
         }
 
         private void clear_Click(object sender, RoutedEventArgs e)
@@ -190,11 +181,29 @@ namespace Projekti
         }
         public void jatka_Click(object sender, RoutedEventArgs e)
         {
-            StreamWriter File = new StreamWriter("users.txt", true);
-            //File.Write(username1.Text + "," + password2.Text);
-            string tallennettava = (username1.Text + "," + password2.Text + "," + email.Text + "," + perhe.Text + "," + aikuiset.Text + "," + lapset.Text);
-            File.WriteLine(tallennettava);
-            File.Close();
+            bool jatka = false;
+
+            string emailcheck = email.Text;
+            if (emailcheck.EndsWith("@gmail.com"))
+            {
+                jatka = true;
+            }
+            else
+            {
+                MessageBox.Show("Sähköpostiosoitteen tulee päättyä '@gmail.com'");
+            }
+
+            if (jatka == true)
+            {
+                StreamWriter File = new StreamWriter("users.txt", true);
+                string tallennettava = (username1.Text + "," + password2.Text + "," + email.Text + "," + perhe.Text + "," + aikuiset.Text + "," + lapset.Text);
+                File.WriteLine(tallennettava);
+                File.Close();
+                MessageBox.Show("Käyttäjätunnus luotiin onnistuneesti!");
+                CreateNewUser.Visibility = Visibility.Hidden;
+                Tyhjennä();
+            }
+           
         }
         private void jatka2_Click(object sender, RoutedEventArgs e)
         {

@@ -26,24 +26,14 @@ namespace Projekti
             InitializeComponent();
         }
 
-        private void Inventaario_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-        }
-
-        private void Tarkista_Click(object sender, RoutedEventArgs e)
-        {
-            
-
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            Päänäkymä win2 = new Päänäkymä();
-            win2.Show();
-        }
-
         private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow win2 = new MainWindow();
+            win2.Show();
+            this.Close();
+        }
+
+        private void Asetukset_Click(object sender, RoutedEventArgs e)
         {
             MainWindow win2 = new MainWindow();
             win2.Show();

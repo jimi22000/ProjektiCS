@@ -1,2 +1,3 @@
-leinojimi,Jodjedi1,lleinojimi@gmail.com,1,0,0
-jimitesti,Jodajedi1,jimi@gmail.com,1,0,0
+dasdasdas,dasdasd,dasm@gmail.com,1,0,0
+mutsis,12v,mutsis@gmail.com,1,1,0
+leinojimi,Jodajedi1,jimi@gmail.com,1,1,0

@@ -8,10 +8,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="GM_logo.jpg" />
     <None Remove="GM_nimi.jpg" />
   </ItemGroup>
 
   <ItemGroup>
+    <Resource Include="GM_logo.jpg" />
     <Resource Include="GM_nimi.jpg" />
   </ItemGroup>
 

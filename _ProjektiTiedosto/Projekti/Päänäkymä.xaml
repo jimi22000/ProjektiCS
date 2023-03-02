@@ -7,25 +7,10 @@
         mc:Ignorable="d"
         Title="Päänäkymä" Height="450" Width="800">
     <DockPanel>
-        <Menu DockPanel.Dock="Top" Background="White">
-            <MenuItem Header="_Asetukset">
-                <MenuItem Header="_Kieli"/>
-                <MenuItem Header="_Tyyli"/>
-            </MenuItem>
+        <Menu DockPanel.Dock="Top" Background="White" HorizontalAlignment="Stretch">
+            <MenuItem Header="_Asetukset" Click="Asetukset_Click" Margin="0,0,660,0"/>
             <MenuItem Header="_Takaisin" Click="MenuItem_Click"/>
-
-
         </Menu>
-
-        <Grid Height="415" Width="800">
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="3*"/>
-                <ColumnDefinition Width="22*"/>
-            </Grid.ColumnDefinitions>
-            <TextBox x:Name="Inventaario" Height="375" VerticalAlignment="Center" Margin="10,0,640,0" TextChanged="Inventaario_TextChanged" Grid.ColumnSpan="2" />
-            <Button x:Name="Tarkista" Content="Button" HorizontalAlignment="Left" Margin="10,0,0,0" VerticalAlignment="Top" Click="Tarkista_Click"/>
-            <Button Content="Button" HorizontalAlignment="Left" Margin="55,0,0,0" VerticalAlignment="Top" Click="Button_Click"/>
-
-        </Grid>
+        <Grid Height="410" Width="790"/>
     </DockPanel>
 </Window>

@@ -1,0 +1,21 @@
+Sprintti 5
+
+Ma 06.03.2023 Paikalla Eemi ja Jooa, Jimi töissä
+
+Käsiteltävät asiat
+
+Mitä ollaan saatu tehtyä?
+Asetuksia, pää ohjelman toimintaa.
+
+Mitä tulisi saada tehtyä?
+Pääohjelma käyttökuntoon, viimeistelyä
+
+Miksi tämä sprintti on tärkeä?
+Tämä on tärkeä sprintti, koska olemme paljon aikatalua jäljessä.
+
+Mitä tässä sprintissä voidaan saada valmiiksi?
+Koko soveluus pitäisi saada valmiiksi.
+
+Miten valittu työ saadaan valmiiksi?
+Työ saadaan valmiiksi ahkeralla työllä hyvällä ryhmähengellä ja yhdessä tekemisellä.
+

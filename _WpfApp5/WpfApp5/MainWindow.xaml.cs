@@ -25,33 +25,37 @@ namespace WpfApp5
     public partial class MainWindow : Window
     {
         private ObservableCollection<InventaarioItem> inventaarioItems= new ObservableCollection<InventaarioItem>();
-
-        public class ComboboxItem
-        {
-            public string Text { get; set; }
-            public object Value { get; set; }
-            public override string ToString()
-            {
-                return Text;
-            }
-        }
+        //TODO listbox vaihdettava listview objektiksi
+        //TODO xaml tiedostosta template näyttämään määrä, tekstin kanssa
 
         public class InventaarioItem
         {
-            public string Text { get; set; }
+            public string? Text { get; set; }
             public int Count { get; set; }
+            //public override string? ToString()
+            //{
+            //    return Text;
+            //}
         }
 
+        private InventaarioItem? _selectedinventoryitem;
+        //public InventaarioItem ValittuInventaarioItemi { get; set; }
 
         public MainWindow()
         {
             InitializeComponent();
             inventaario.ItemsSource = inventaarioItems;
             StreamReader reader = File.OpenText("save.txt");
-            string line = reader.ReadLine();
+            string? line = reader.ReadLine();
+
             while (line != null)
             {
-                inventaario.Items.Add((string)line);
+                if (line != null)
+                {
+                    var item = new InventaarioItem() { Text = line };
+                    inventaarioItems.Add(item);
+                }
+                
                 line = reader.ReadLine();
             }
             reader.Close();
@@ -60,36 +64,34 @@ namespace WpfApp5
         {
             //Lisää listaan itemi
             InventaarioItem item1 = new InventaarioItem();
+            item1.Text = tarvikkeet.Text; //lue tarvikkeet teksti
+            int maara = int.Parse(määrä.Text);
+            item1.Count = maara; //lue määrä textboxista
             bool found = false;
-            foreach (var item in inventaario.Items)
+            foreach (var item in inventaarioItems)
             {
-                if (item.ToString().Contains(tarvikkeet.Text))
+                if (item1.ToString().Contains(tarvikkeet.Text))
                 {
                     found = true;
-                    inventaario.Items.Remove(item1);
-                    item1.Text = tarvikkeet.Text; //lue tarvikkeet teksti
-                    int maara = int.Parse(määrä.Text);
-                    item1.Count = maara; //lue määrä jostain textboxista
-                    inventaarioItems.Add(item1);
+                    inventaarioItems.Remove(new InventaarioItem() { Text = item1.Text, Count = item1.Count });
+                    inventaarioItems.Add(new InventaarioItem() { Text = item1.Text, Count = item1.Count });
                     break;
                 }
             }
             if (!found)
             {
-                item1.Text = tarvikkeet.Text;
-                int maara = int.Parse(määrä.Text);
-                item1.Count = maara; 
-                inventaarioItems.Add(item1);
+                inventaarioItems.Add(new InventaarioItem() { Text = item1.Text, Count = item1.Count });
             }
-            ArrayList q = new ArrayList();
-            foreach (object o in inventaario.Items)
-                q.Add(o);
-            q.Sort();
-            inventaario.Items.Clear();
-            foreach (object o in q)
-            {
-                inventaario.Items.Add(o);
-            }
+            //Alla olevan koodin pitäisi järjestää lista a-ö
+            //ArrayList q = new ArrayList();
+            //foreach (object o in inventaarioItems)
+            //    q.Add(o);
+            //q.Sort();
+            //inventaarioItems.Clear();
+            //foreach (object o in q)
+            //{
+            //    inventaarioItems.Add(o);
+            //}
         }
 
         private void tarvikkeet_TextChanged(object sender, TextChangedEventArgs e)
@@ -109,48 +111,31 @@ namespace WpfApp5
 
         private void inventaario_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            var listbox = (ListBox)sender;
+            _selectedinventoryitem = (InventaarioItem)listbox.SelectedValue;
         }
 
         private void tallenna_Click(object sender, RoutedEventArgs e) //tämä nappula tallentaa inventaario listan tiedot tiedostoon nimeltä save.txt
         {
             const string sPath = "save.txt";
-            System.IO.File.WriteAllLines(sPath, inventaario.Items.Cast<string>().ToArray());
+            System.IO.File.WriteAllLines(sPath, inventaarioItems.Cast<string>().ToArray());
         }
 
         private void poista_Click(object sender, RoutedEventArgs e)
         {
-            inventaario.Items.RemoveAt(inventaario.SelectedIndex);
-        }
-
-        private void combo_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-
-        }
-
-        private void test_Click(object sender, RoutedEventArgs e)
-        {
-            ComboboxItem item = new ComboboxItem();
-            int vallue = int.Parse(value.Text);
-            item.Text= teksti.Text;
-            item.Value = vallue;
-            combo.Items.Add(item);
-            combo.SelectedIndex = 0;
-        }
-
-        private void teksti_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void value_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void poisto_Click(object sender, RoutedEventArgs e)
-        {
-            combo.Items.RemoveAt((int) combo.SelectedIndex);
+            //tämä poistaa koko rivin
+            //inventaario.Items.RemoveAt(inventaario.SelectedIndex);
+            if (_selectedinventoryitem != null)
+            {
+                if (_selectedinventoryitem.Count > 0) 
+                {
+                    _selectedinventoryitem.Count -= 1;
+                }
+                else
+                {
+                    inventaarioItems.Remove(_selectedinventoryitem);
+                }
+            }
         }
     }
 }

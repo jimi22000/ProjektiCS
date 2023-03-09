@@ -8,19 +8,19 @@
     "net7.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\jooap\\.nuget\\packages\\": {}
+    "C:\\Users\\llein\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\YhteinenRepo\\ProjektiCS\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
+      "projectUniqueName": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
       "projectName": "WpfApp5",
-      "projectPath": "E:\\YhteinenRepo\\ProjektiCS\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
-      "packagesPath": "C:\\Users\\jooap\\.nuget\\packages\\",
-      "outputPath": "E:\\YhteinenRepo\\ProjektiCS\\_WpfApp5\\WpfApp5\\obj\\",
+      "projectPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_WpfApp5\\WpfApp5\\WpfApp5.csproj",
+      "packagesPath": "C:\\Users\\llein\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\llein\\OneDrive\\Työpöytä\\GITHUB\\ProjektiCS\\_WpfApp5\\WpfApp5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\jooap\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\llein\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -64,7 +64,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }

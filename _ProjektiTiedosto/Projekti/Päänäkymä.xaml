@@ -6,11 +6,23 @@
         xmlns:local="clr-namespace:Projekti"
         mc:Ignorable="d"
         Title="Päänäkymä" Height="450" Width="800">
-    <DockPanel>
-        <Menu DockPanel.Dock="Top" Background="White" HorizontalAlignment="Stretch">
-            <MenuItem Header="_Asetukset" Click="Asetukset_Click" Margin="0,0,660,0"/>
-            <MenuItem Header="_Takaisin" Click="MenuItem_Click"/>
-        </Menu>
-        <Grid Height="410" Width="790"/>
-    </DockPanel>
+    <Grid>
+
+        <Button x:Name="lisää" Content="lisää" HorizontalAlignment="Left" Margin="206,13,0,0" VerticalAlignment="Top" Click="lisää_Click" Width="46"/>
+        <Button x:Name="tallenna" Content="tallenna" HorizontalAlignment="Left" Margin="206,88,0,0" VerticalAlignment="Top" Click="tallenna_Click"/>
+        <ListBox x:Name="inventaario" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="13,36,599,35" SelectionChanged="inventaario_SelectionChanged" SelectionMode="Single">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <TextBlock Text="{Binding Text}"></TextBlock>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <TextBox x:Name="tarvikkeet" HorizontalAlignment="Left" Margin="13,13,0,0" TextWrapping="Wrap" Text="tuote" VerticalAlignment="Top" Width="120" TextChanged="tarvikkeet_TextChanged"/>
+        <TextBox x:Name="määrä" HorizontalAlignment="Left" Margin="138,13,0,0" TextWrapping="Wrap" Text="määrä" VerticalAlignment="Top" Width="63" TextChanged="määrä_TextChanged"/>
+        <ListBox x:Name="kauppalista" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="212,117,212,35" SelectionChanged="kauppalista_SelectionChanged"/>
+        <Button x:Name="poista" Content="poista" HorizontalAlignment="Left" Margin="206,60,0,0" VerticalAlignment="Top" Click="poista_Click" Width="46" ToolTip="Vähennä valitun tuotteen saldoa yhdellä"/>
+        <Button x:Name="back2" Content="Palaa" HorizontalAlignment="Left" Margin="745,10,0,0" VerticalAlignment="Top" Height="20" Width="45" Click="back2_Click"/>
+    </Grid>
 </Window>

@@ -25,9 +25,7 @@ namespace WpfApp5
     public partial class MainWindow : Window
     {
         private ObservableCollection<InventaarioItem> inventaarioItems= new ObservableCollection<InventaarioItem>();
-        //TODO listbox vaihdettava listview objektiksi
-        //TODO xaml tiedostosta template näyttämään määrä, tekstin kanssa
-
+        InventaarioItem item1 = new InventaarioItem();
         public class InventaarioItem
         {
             public string? Text { get; set; }
@@ -62,26 +60,7 @@ namespace WpfApp5
         }
         private void lisää_Click(object sender, RoutedEventArgs e)
         {
-            //Lisää listaan itemi
-            InventaarioItem item1 = new InventaarioItem();
-            item1.Text = tarvikkeet.Text; //lue tarvikkeet teksti
-            int maara = int.Parse(määrä.Text);
-            item1.Count = maara; //lue määrä textboxista
-            bool found = false;
-            foreach (var item in inventaarioItems)
-            {
-                if (item1.ToString().Contains(tarvikkeet.Text))
-                {
-                    found = true;
-                    inventaarioItems.Remove(new InventaarioItem() { Text = item1.Text, Count = item1.Count });
-                    inventaarioItems.Add(new InventaarioItem() { Text = item1.Text, Count = item1.Count });
-                    break;
-                }
-            }
-            if (!found)
-            {
-                inventaarioItems.Add(new InventaarioItem() { Text = item1.Text, Count = item1.Count });
-            }
+            lisaus();
             //Alla olevan koodin pitäisi järjestää lista a-ö
             //ArrayList q = new ArrayList();
             //foreach (object o in inventaarioItems)
@@ -92,6 +71,28 @@ namespace WpfApp5
             //{
             //    inventaarioItems.Add(o);
             //}
+        }
+
+        private void lisaus()
+        {
+            //Lisää listaan itemi
+            item1.Text = tarvikkeet.Text; //lue tarvikkeet teksti
+            int maara = int.Parse(määrä.Text);
+            item1.Count = maara; //lue määrä textboxista
+            bool found = false;
+            foreach (var item in inventaarioItems)
+            {
+                if (item1.ToString().Contains(tarvikkeet.Text))
+                {
+                    found = true;
+                    MessageBox.Show("On jo");
+                    break;
+                }
+            }
+            if (!found)
+            {
+                inventaarioItems.Add(item1);
+            }
         }
 
         private void tarvikkeet_TextChanged(object sender, TextChangedEventArgs e)
@@ -106,7 +107,7 @@ namespace WpfApp5
 
         private void kauppalista_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            //TODO lisää nappula jolla valitut tuotteet kauppalistalle, myös tekstiboxit jotta saadaan lisättyä erillisiä tuotteita kauppalistalle ja clear nappula.
         }
 
         private void inventaario_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -117,19 +118,21 @@ namespace WpfApp5
 
         private void tallenna_Click(object sender, RoutedEventArgs e) //tämä nappula tallentaa inventaario listan tiedot tiedostoon nimeltä save.txt
         {
+            //TODO laita tallennus toimimaan.
             const string sPath = "save.txt";
             System.IO.File.WriteAllLines(sPath, inventaarioItems.Cast<string>().ToArray());
         }
 
         private void poista_Click(object sender, RoutedEventArgs e)
         {
-            //tämä poistaa koko rivin
-            //inventaario.Items.RemoveAt(inventaario.SelectedIndex);
             if (_selectedinventoryitem != null)
             {
-                if (_selectedinventoryitem.Count > 0) 
+                if (_selectedinventoryitem.Count > 1) 
                 {
+                    //TODO laita toimimaan.
                     _selectedinventoryitem.Count -= 1;
+                    inventaarioItems.Remove(_selectedinventoryitem);
+                    inventaarioItems.Add(item1);
                 }
                 else
                 {

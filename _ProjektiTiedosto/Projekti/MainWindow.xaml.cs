@@ -82,31 +82,12 @@ namespace Projekti
             }
         }
 
-        private void settings_Click(object sender, RoutedEventArgs e)
-        {
-            Settings.Visibility = Visibility.Visible;
-            aloitus.Visibility = Visibility.Hidden;
-            newuser.Visibility = Visibility.Hidden;
-            LogIn.Visibility = Visibility.Hidden;
-            CreateNewUser.Visibility = Visibility.Hidden;
-            GM_teksti.Visibility = Visibility.Hidden;
-        }
-
         private void Quit_Click(object sender, RoutedEventArgs e)
         {
             aarjuusure win2 = new aarjuusure();
             win2.Show();
         }
 
-        private void back_Click(object sender, RoutedEventArgs e)
-        {
-            login.Visibility = Visibility.Visible;
-            newuser.Visibility = Visibility.Visible;
-            Quit.Visibility = Visibility.Visible;
-            settings.Visibility = Visibility.Visible;
-            GM_teksti.Visibility = Visibility.Visible;
-            back2.Visibility= Visibility.Hidden;
-        }
         private void perhe_TextChanged(object sender, TextChangedEventArgs e)
         {
 
@@ -204,22 +185,22 @@ namespace Projekti
             }
            
         }
+
         public void jatka2_Click(object sender, RoutedEventArgs e)
         {
             using (StreamReader sr = new StreamReader("users.txt"))
             {
                 string rivi;
-                bool kirjaudu = false;
+                string käyttäjä = username.Text;
                 bool sallittu = false;
                 while ((rivi = sr.ReadLine()) != null!)
                 {
                     // Jaetaan rivi pilkun kohdalta kahteen osaan
                     string[] tiedot = rivi.Split(',');
                     // Tarkistetaan käyttäjänimi ja salasana
-                    if (tiedot[0] == username.Text && tiedot[1] == password.Text)
+                    if (tiedot[0] == käyttäjä && tiedot[1] == password.Text)
                     {
                         sallittu = true;
-                        kirjaudu = true;
                     }
                 }
                 if (sallittu == true)
@@ -228,38 +209,15 @@ namespace Projekti
                     win2.Show();
                     this.Close();
                 }
-                if (kirjaudu == true)
-                {
-                    username2.Text = username.Text;
-                }
                 else
                 {
                     MessageBox.Show("Virheellinen käyttäjätunnus tai salasana");
                 }
             }
         }
-        //DKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
-        public void adults_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            using (StreamReader sr = new StreamReader("users.txt"))
-            {
-
-            }
-
-        }
-        //DKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK
-        private void childs_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void username2_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
+        
         private void back2_Click(object sender, RoutedEventArgs e)
         {
-            Settings.Visibility = Visibility.Hidden;
             aloitus.Visibility = Visibility.Visible;
             GM_teksti.Visibility = Visibility.Visible;
             newuser.Visibility = Visibility.Visible;    

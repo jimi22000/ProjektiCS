@@ -15,7 +15,6 @@
         <StackPanel x:Name="aloitus" Orientation="Vertical" Width="200" Margin="256,11,440,164" Grid.Row="1" Visibility="Visible">
             <Button x:Name="login" Content="Kirjaudu sisään"  Height="48" Width="152" FontSize="20" Click="login_Click"/>
             <Button x:Name="newuser" Content="Luo uusi käyttäjä" HorizontalAlignment="Center"   Height="48" Width="152" Margin="0,5,0,0" FontSize="20" Click="newuser_Click" Grid.Row="1"/>
-            <Button x:Name="settings" Content="Asetukset" HorizontalAlignment="Center"   Height="48" Width="152" Margin="0,5,0,0" FontSize="20" Grid.Row="1" Click="settings_Click"/>
             <Button x:Name="Quit" Content="Poistu" HorizontalAlignment="Center"  Height="48" Width="152" Margin="0,5,0,0" FontSize="20" Click="Quit_Click" Grid.Row="1"/>
         </StackPanel>
         <Grid x:Name="CreateNewUser" Grid.Row="1" Margin="450,16,180,164" Visibility="Hidden" Background="#FFF9F9F9">
@@ -50,7 +49,7 @@
             <Button x:Name="palaa2" Content="Poistu" HorizontalAlignment="Left" Margin="126,89,0,0" VerticalAlignment="Top" Height="25" Width="50" Click="palaa2_Click"/>
             <Button Content="Unohditko salasanasi?" HorizontalAlignment="Left" Margin="10,121,0,0" VerticalAlignment="Top"/>
         </Grid>
-        <Grid Name="Settings" Margin="0,10,0,0" Grid.RowSpan="2" Visibility="Visible">
+        <Grid Name="Settings" Margin="0,10,0,0" Grid.RowSpan="2" Visibility="Hidden">
             <Image x:Name="GM_Logo" HorizontalAlignment="Left" Height="160" VerticalAlignment="Top" Width="147" Source="/GM_logo.jpg" Margin="28,18,0,0" RenderTransformOrigin="0.5,0.5" Visibility="Visible">
                 <Image.RenderTransform>
                     <TransformGroup>
@@ -64,11 +63,11 @@
             <Button x:Name="back2" Content="Takaisin" HorizontalAlignment="Left" Margin="48,503,0,0" VerticalAlignment="Top" Height="40" Width="140" FontSize="20" Click="back2_Click"/>
             <Label x:Name="userdetails" Content="Käyttäjäntiedot" HorizontalAlignment="Left" Margin="48,214,0,0" VerticalAlignment="Top" Width="168" Height="52" FontSize="22"/>
             <TextBlock HorizontalAlignment="Left" Text="Aikuiset:" Margin="62,262,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="76" FontSize="20"/>
-            <TextBox x:Name="adults" HorizontalAlignment="Left"  Text="" TextWrapping="Wrap" Margin="143,262,0,0" VerticalAlignment="Top" Width="73" Height="24" FontSize="18" TextChanged="adults_TextChanged"/>
+            <TextBox x:Name="adults" HorizontalAlignment="Left"  Text="" TextWrapping="Wrap" Margin="143,262,0,0" VerticalAlignment="Top" Width="73" Height="24" FontSize="18"/>
             <TextBlock HorizontalAlignment="Left" Text="Lapset:" Margin="62,295,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="76" FontSize="20"/>
-            <TextBox x:Name="childs" HorizontalAlignment="Left" Text="" Margin="143,297,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="73" Height="24" FontSize="18" TextChanged="childs_TextChanged"/>
+            <TextBox x:Name="childs" HorizontalAlignment="Left" Text="" Margin="143,297,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="73" Height="24" FontSize="18"/>
             <TextBlock HorizontalAlignment="Left" Text="Käyttäjänimi:" Margin="254,221,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="28" Width="118" FontSize="20"/>
-            <TextBox x:Name="username2" HorizontalAlignment="Left"  Text="" TextWrapping="Wrap" Margin="377,223,0,0" VerticalAlignment="Top" Width="121" Height="24" FontSize="18" TextChanged="username2_TextChanged"/>
+            <TextBox x:Name="username2" HorizontalAlignment="Left"  Text="" TextWrapping="Wrap" Margin="377,223,0,0" VerticalAlignment="Top" Width="121" Height="24" FontSize="18"/>
         </Grid>
     </Grid>
 </Window>

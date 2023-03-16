@@ -2,3 +2,4 @@ dasdasdas,dasdasd,dasm@gmail.com,1,0,0
 mutsis,12v,mutsis@gmail.com,1,1,0
 leinojimi,Jodajedi1,jimi@gmail.com,1,1,0
 Pasi,Jodajedi1,pasi@gmail.com,1,1,0
+pasi,Jodajedi1,pasi@gmail.com,,1,0

@@ -12,8 +12,8 @@
       }
     ],
     "additionalProbingPaths": [
-      "C:\\Users\\llein\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\llein\\.nuget\\packages"
+      "C:\\Users\\jooap\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\jooap\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

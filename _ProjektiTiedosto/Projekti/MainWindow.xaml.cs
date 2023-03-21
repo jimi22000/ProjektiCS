@@ -183,7 +183,6 @@ namespace Projekti
                 CreateNewUser.Visibility = Visibility.Hidden;
                 Tyhjennä();
             }
-           
         }
 
         public void jatka2_Click(object sender, RoutedEventArgs e)
@@ -205,7 +204,16 @@ namespace Projekti
                 }
                 if (sallittu == true)
                 {
-                    Päänäkymä win2 = new Päänäkymä();
+                    var tekstitiedosto = käyttäjä + ".txt";
+                    if (!File.Exists(tekstitiedosto))
+                    {
+                        // Tarkistetaan, jos tiedosto on olemassa, jos ei, niin luodaan uusi
+                        using (StreamWriter sw = File.CreateText(tekstitiedosto))
+                        {
+                        }
+                    }
+
+                    Päänäkymä win2 = new Päänäkymä(tekstitiedosto);
                     win2.Show();
                     this.Close();
                 }
@@ -215,7 +223,6 @@ namespace Projekti
                 }
             }
         }
-        
         private void back2_Click(object sender, RoutedEventArgs e)
         {
             aloitus.Visibility = Visibility.Visible;

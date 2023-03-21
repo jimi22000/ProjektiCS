@@ -1,10 +1,11 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -13,25 +14,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace Projekti
 {
     /// <summary>
-    /// Interaction logic for Päänäkymä.xaml
+    /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class Päänäkymä : Window
     {
-        private void back2_Click(object sender, RoutedEventArgs e)
-        {
-            MainWindow win2 = new MainWindow();
-            win2.Show();
-            this.Close();
-        }
         private ObservableCollection<InventaarioItem> inventaarioItems = new ObservableCollection<InventaarioItem>();
-        //TODO listbox vaihdettava listview objektiksi
-        //TODO xaml tiedostosta template näyttämään määrä, tekstin kanssa
-
+        InventaarioItem item1 = new InventaarioItem();
         public class InventaarioItem
         {
             public string? Text { get; set; }
@@ -44,12 +38,15 @@ namespace Projekti
 
         private InventaarioItem? _selectedinventoryitem;
         //public InventaarioItem ValittuInventaarioItemi { get; set; }
+        
+        private string _tekstitiedosto;
 
-        public Päänäkymä()
+        public Päänäkymä(string tekstitiedosto)
         {
             InitializeComponent();
+            _tekstitiedosto = tekstitiedosto;
             inventaario.ItemsSource = inventaarioItems;
-            StreamReader reader = File.OpenText("save.txt");
+            StreamReader reader = File.OpenText(tekstitiedosto);
             string? line = reader.ReadLine();
 
             while (line != null)
@@ -66,26 +63,7 @@ namespace Projekti
         }
         private void lisää_Click(object sender, RoutedEventArgs e)
         {
-            //Lisää listaan itemi
-            InventaarioItem item1 = new InventaarioItem();
-            item1.Text = tarvikkeet.Text; //lue tarvikkeet teksti
-            int maara = int.Parse(määrä.Text);
-            item1.Count = maara; //lue määrä textboxista
-            bool found = false;
-            foreach (var item in inventaarioItems)
-            {
-                if (item1.ToString().Contains(tarvikkeet.Text))
-                {
-                    found = true;
-                    inventaarioItems.Remove(new InventaarioItem() { Text = item1.Text, Count = item1.Count });
-                    inventaarioItems.Add(new InventaarioItem() { Text = item1.Text, Count = item1.Count });
-                    break;
-                }
-            }
-            if (!found)
-            {
-                inventaarioItems.Add(new InventaarioItem() { Text = item1.Text, Count = item1.Count });
-            }
+            lisaus();
             //Alla olevan koodin pitäisi järjestää lista a-ö
             //ArrayList q = new ArrayList();
             //foreach (object o in inventaarioItems)
@@ -96,6 +74,28 @@ namespace Projekti
             //{
             //    inventaarioItems.Add(o);
             //}
+        }
+
+        private void lisaus()
+        {
+            //Lisää listaan itemi
+            item1.Text = tarvikkeet.Text; //lue tarvikkeet teksti
+            int maara = int.Parse(määrä.Text);
+            item1.Count = maara; //lue määrä textboxista
+            bool found = false;
+            foreach (var item in inventaarioItems)
+            {
+                if (item1.ToString().Contains(tarvikkeet.Text))
+                {
+                    found = true;
+                    MessageBox.Show("On jo");
+                    break;
+                }
+            }
+            if (!found)
+            {
+                inventaarioItems.Add(item1);
+            }
         }
 
         private void tarvikkeet_TextChanged(object sender, TextChangedEventArgs e)
@@ -110,7 +110,7 @@ namespace Projekti
 
         private void kauppalista_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            //TODO lisää nappula jolla valitut tuotteet kauppalistalle, myös tekstiboxit jotta saadaan lisättyä erillisiä tuotteita kauppalistalle ja clear nappula.
         }
 
         private void inventaario_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -118,22 +118,28 @@ namespace Projekti
             var listbox = (ListBox)sender;
             _selectedinventoryitem = (InventaarioItem)listbox.SelectedValue;
         }
-
-        private void tallenna_Click(object sender, RoutedEventArgs e) //tämä nappula tallentaa inventaario listan tiedot tiedostoon nimeltä save.txt
+        // Tallentaa oikeaan tiedostoon "Projekti.Päänäkymä+InventaarioItem"
+        private void tallenna_Click(object sender, RoutedEventArgs e)
         {
-            const string sPath = "save.txt";
-            System.IO.File.WriteAllLines(sPath, inventaarioItems.Cast<string>().ToArray());
+            using (StreamWriter sw = new StreamWriter(_tekstitiedosto))
+            {
+                foreach (InventaarioItem item in inventaario.Items)
+                {
+                    sw.WriteLine(item.ToString());
+                }
+            }
         }
 
         private void poista_Click(object sender, RoutedEventArgs e)
         {
-            //tämä poistaa koko rivin
-            //inventaario.Items.RemoveAt(inventaario.SelectedIndex);
             if (_selectedinventoryitem != null)
             {
-                if (_selectedinventoryitem.Count > 0)
+                if (_selectedinventoryitem.Count > 1)
                 {
+                    //TODO laita toimimaan.
                     _selectedinventoryitem.Count -= 1;
+                    inventaarioItems.Remove(_selectedinventoryitem);
+                    inventaarioItems.Add(item1);
                 }
                 else
                 {

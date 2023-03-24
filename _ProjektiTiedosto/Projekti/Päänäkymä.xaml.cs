@@ -121,13 +121,15 @@ namespace Projekti
         // Tallentaa oikeaan tiedostoon "Projekti.Päänäkymä+InventaarioItem"
         private void tallenna_Click(object sender, RoutedEventArgs e)
         {
-            using (StreamWriter sw = new StreamWriter(_tekstitiedosto))
+            List<string> tekstiLista = new List<string>();
+
+            foreach (InventaarioItem item in inventaarioItems)
             {
-                foreach (InventaarioItem item in inventaario.Items)
-                {
-                    sw.WriteLine(item.ToString());
-                }
+                tekstiLista.Add(item.Text);
             }
+
+            // tallennetaan tekstitiedostoon kaikki listan tekstit
+            File.WriteAllLines(_tekstitiedosto, tekstiLista);
         }
 
         private void poista_Click(object sender, RoutedEventArgs e)

@@ -1,5 +1,1 @@
-leinojimi,Jodajedi1,jimi@gmail.com,1,1,0
-pekka,Jodajedi1,pekka@gmail.com,1,1,0
-leinojimi,Jodajedi1,jimi@gmail.com,1,1,0
-pasi,Jodajedi1,pasi@gmail.com,1,1,0
-jussi,Jodajedi1,jussi@gmail.com,1,1,0
+Jimi,Jodajedi1,jimi@gmail.com,1,1,0
